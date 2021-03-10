@@ -8,7 +8,7 @@ result = [23, 1, 3, 10, 4, 11]
 
 
 def generator_list(src):
-    return [src[i] for i in range(1, len(src)) if src.count(src[i]) == 1]
+    return [src[i] for i in range(0, len(src)) if src.count(src[i]) == 1]
 
 
 # созданим генератора.
