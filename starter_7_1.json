@@ -1,0 +1,22 @@
+[
+  {
+    "catalog": "my_project",
+    "parent": ""
+  },
+  {
+    "catalog": "settings",
+    "parent": "my_project"
+  },
+  {
+    "catalog": "mainapp",
+    "parent": "my_project"
+  },
+  {
+    "catalog": "adminapp",
+    "parent": "my_project"
+  },
+  {
+    "catalog": "authapp",
+    "parent": "my_project"
+  }
+]
