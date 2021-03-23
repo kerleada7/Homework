@@ -13,15 +13,25 @@
 '''
 
 import json
+import os
 
 
 with open('starter_7_1.json') as f:
     list_file = json.load(f)
 
+# текущий путь к каталогу
+current_path = os.getcwd()
+
+# цикл по массиву путей
 for i in list_file:
     catalog_f = i.get("catalog")
     parent_f = i.get("parent")
-    if parent_f:
-        pass
+
+    if parent_f == '':
+        new_path = fr'{current_path}\{catalog_f}'
     else:
-        pass
+        new_path = fr'{current_path}\{parent_f}\{catalog_f}'
+
+    # создаем каталог
+    if not os.path.exists(new_path):
+        os.mkdir(new_path)
